@@ -5,23 +5,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity(name = "BOAT")
 public class Boat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String type;
-    private Double length;
 
     // Constructors
     public Boat() {
     }
 
-    public Boat(String name, String type, Double length) {
+    public Boat(String name) {
         this.name = name;
-        this.type = type;
-        this.length = length;
     }
 
     // Getters and Setters
@@ -41,19 +37,5 @@ public class Boat {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
-    }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public Double getLength() {
-        return length;
-    }
-
-    public void setLength(Double length) {
-        this.length = length;
-    }
 }
