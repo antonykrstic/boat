@@ -13,8 +13,12 @@ class LoadDatabase {
 
     private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
 
+    /**
+     * This gets run immediately after the spring boot app is loaded.
+     * Could have used data.sql in src/main/resources
+     */
     @Bean
-    CommandLineRunner initDatabase(BoatRepository repository) {
+    CommandLineRunner initDatabase(final BoatRepository repository) {
 
         return args -> {
             log.info("Preloading " + repository.save(new Boat("Bilboat Baggins")));

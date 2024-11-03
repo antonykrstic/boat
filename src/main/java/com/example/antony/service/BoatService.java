@@ -13,7 +13,7 @@ public class BoatService {
     private final BoatRepository boatRepository;
 
     @Autowired
-    public BoatService(BoatRepository boatRepository) {
+    public BoatService(final BoatRepository boatRepository) {
         this.boatRepository = boatRepository;
     }
 

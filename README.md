@@ -5,13 +5,17 @@ Hi and welcome to the Dancerace boat api
 ## Installation (Maven)
 
 ```bash
-nvm clean install
+mvn clean install
 ```
 
 ## Run the API
 
 use com.example.antony.BoatApplication to run the application. When you first run this application it will auto load the
 in memory DB with some sample data.
+
+## Authentication
+
+This application protected by basic auth. With only ADMINs allowed to perform DELETE requests.
 
 ## Example Requests
 
