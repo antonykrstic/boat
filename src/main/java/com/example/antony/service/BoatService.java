@@ -21,15 +21,19 @@ public class BoatService {
         return boatRepository.findAll();
     }
 
-    public Optional<Boat> getBoatById(Long id) {
+    public Optional<Boat> getBoatById(final Long id) {
         return boatRepository.findById(id);
     }
 
-    public Boat saveBoat(Boat boat) {
+    public Optional<Boat> getBoatByName(final String name) {
+        return boatRepository.findBoatByName(name);
+    }
+
+    public Boat saveBoat(final Boat boat) {
         return boatRepository.save(boat);
     }
 
-    public void deleteBoat(Long id) {
+    public void deleteBoat(final Long id) {
         boatRepository.deleteById(id);
     }
 }
